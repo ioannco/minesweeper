@@ -13,12 +13,12 @@ using window_callback_t = std::function<bool (const sf::Event::MouseButtonEvent 
 /**
  * \brief Base class for all rectangle shaped buttons
  */
-class Button : RectWindow {
+class CallbackButton : public RectWindow {
 public:
     // Ctors
 
-    Button(sf::RectangleShape shape, window_callback_t callback);
-    Button(const sf::Vector2f& pos, const sf::Vector2f& size, const sf::Color& fillColor, const sf::Color& outlineColor, window_callback_t callback);
+    CallbackButton(sf::RectangleShape shape, window_callback_t callback);
+    CallbackButton(const sf::Vector2f& pos, const sf::Vector2f& size, const sf::Color& fillColor, const sf::Color& outlineColor, window_callback_t callback);
 
     // Events
 
