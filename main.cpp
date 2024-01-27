@@ -3,6 +3,7 @@
 
 #include "UI/WindowManager.h"
 #include "UI/CallbackButton.h"
+#include "UI/SpriteWindow.h"
 
 abstract_window_container constructLayout();
 
@@ -47,5 +48,15 @@ abstract_window_container constructLayout() {
             callback
             );
 
-    return {sampleButton};
+    static sf::Texture texture;
+    texture.loadFromFile("../bomb.png");
+
+    sf::Sprite bombSprite(texture);
+    bombSprite.setPosition(200, 500);
+
+    auto bombWindow = std::make_shared<SpriteWindow>(
+            bombSprite
+            );
+
+    return {sampleButton, bombWindow};
 }

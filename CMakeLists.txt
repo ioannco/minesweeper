@@ -12,6 +12,8 @@ add_executable(MineSweeper main.cpp
         UI/CallbackButton.cpp
         UI/CallbackButton.h
         UI/WindowManager.cpp
-        UI/WindowManager.h)
+        UI/WindowManager.h
+        UI/SpriteWindow.h
+        UI/SpriteWindow.cpp)
 
 target_link_libraries(MineSweeper PRIVATE sfml-system sfml-network sfml-graphics sfml-window)
