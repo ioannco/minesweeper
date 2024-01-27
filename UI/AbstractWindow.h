@@ -8,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 
 /**
- * \brief Base class for all windows
+ * \brief Base interface class for all windows
  */
 class AbstractWindow {
 public:
