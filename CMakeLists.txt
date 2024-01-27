@@ -9,8 +9,8 @@ add_executable(MineSweeper main.cpp
         UI/AbstractWindow.h
         UI/RectWindow.cpp
         UI/RectWindow.h
-        UI/Button.cpp
-        UI/Button.h
+        UI/CallbackButton.cpp
+        UI/CallbackButton.h
         UI/WindowManager.cpp
         UI/WindowManager.h)
 
