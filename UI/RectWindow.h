@@ -27,8 +27,6 @@ public:
     bool onMouseMove(const sf::Event::MouseMoveEvent &event) override;
     bool onClick(const sf::Event::MouseButtonEvent &event) override;
 
-public:
-
     // Getters and setters
 
     sf::RectangleShape getShape() const;

@@ -14,6 +14,8 @@ add_executable(MineSweeper main.cpp
         UI/WindowManager.cpp
         UI/WindowManager.h
         UI/SpriteWindow.h
-        UI/SpriteWindow.cpp)
+        UI/SpriteWindow.cpp
+        engine/SweeperEngine.cpp
+        engine/SweeperEngine.h)
 
 target_link_libraries(MineSweeper PRIVATE sfml-system sfml-network sfml-graphics sfml-window)
