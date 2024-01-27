@@ -50,6 +50,11 @@ void WindowManager::removeWindow(const abstract_window_ptr &window) {
     m_windows.erase(std::find(m_windows.begin(), m_windows.end(), window));
 }
 
+void WindowManager::draw(sf::RenderTarget &target) const {
+    for (auto & window : m_windows)
+        window->draw(target);
+}
+
 template<typename Container>
 void WindowManager::addAll(const Container &windows) {
     m_windows.insert(m_windows.end(), windows.begin(), windows.end());

@@ -9,7 +9,7 @@
 /**
 * Base class for all rectange shaped windows
 */
-class RectWindow : AbstractWindow {
+class RectWindow : public AbstractWindow {
 public:
     // Ctors
 

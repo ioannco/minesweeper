@@ -19,6 +19,7 @@ public:
 
     bool processEvent(const sf::Event & event);
     void update() const;
+    void draw(sf::RenderTarget & target) const;
 
     void addWindow(abstract_window_ptr window);
     void removeWindow(const abstract_window_ptr & window);
