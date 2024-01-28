@@ -4,13 +4,17 @@
 
 #ifndef WINDOWMANAGER_H
 #define WINDOWMANAGER_H
-#include <queue>
+#include <list>
 
 #include "AbstractWindow.h"
 
 using abstract_window_ptr = std::shared_ptr<AbstractWindow>;
-using abstract_window_container = std::deque<abstract_window_ptr>;
+using abstract_window_weak_ptr = std::weak_ptr<AbstractWindow>;
+using abstract_window_container = std::list<abstract_window_ptr>;
 
+/**
+ * \brief Manager for window objects
+ */
 class WindowManager {
 public:
     WindowManager() = default;
@@ -30,7 +34,6 @@ public:
 private:
     abstract_window_container m_windows;
 };
-
 
 
 #endif //WINDOWMANAGER_H

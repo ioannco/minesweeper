@@ -20,7 +20,7 @@ public:
     // Update members
 
     void draw(sf::RenderTarget& target) const override;
-    void update() override;
+    void updateWindow() override;
 
     // Event handling
 
@@ -31,6 +31,12 @@ public:
 
     sf::RectangleShape getShape() const;
     void setShape(sf::RectangleShape shape);
+
+    // Info
+
+    bool contains(const sf::Vector2f& point) const override;
+    bool contains(float x, float y) const override;
+    bool contains(int x, int y) const override;
 
 private:
     sf::RectangleShape m_shape{};

@@ -18,32 +18,34 @@ bool WindowManager::processEvent(const sf::Event& event)
 {
     switch (event.type) {
         case sf::Event::MouseButtonReleased: // OnClick
-            for (auto & window : m_windows)
-                if (window->onClick(event.mouseButton))
-                    return true;
-            break;
+            return std::any_of(m_windows.begin(), m_windows.end(),
+                [event](const abstract_window_ptr & window)
+                {
+                    return window->contains(event.mouseButton.x, event.mouseButton.y) && window->onClick(event.mouseButton);
+                }
+                );
 
         case sf::Event::MouseMoved: // OnMouseMove
-            for (auto & window : m_windows)
-                if (window->onMouseMove(event.mouseMove))
-                    return true;
-            break;
+            return std::any_of(m_windows.begin(), m_windows.end(),
+                [event](const abstract_window_ptr & window)
+                {
+                    return window->contains(event.mouseMove.x, event.mouseMove.y) && window->onMouseMove(event.mouseMove);
+                }
+                );
 
         default:
             return false;
     }
-
-    return false;
 }
 
 void WindowManager::update() const {
     for (auto & window : m_windows) {
-        window->update();
+        window->updateWindow();
     }
 }
 
 void WindowManager::addWindow(abstract_window_ptr window) {
-    m_windows.push_back(window);
+    m_windows.push_back(std::move(window));
 }
 
 void WindowManager::removeWindow(const abstract_window_ptr &window) {

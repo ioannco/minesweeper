@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "../UI/WindowManager.h"
+#include "../UI/RectNestedWindow.h"
 
 class SweeperEngine {
 public:
@@ -14,10 +15,12 @@ public:
     SweeperEngine(unsigned int windowWidth, unsigned int windowHeight, const std::string& title);
 
     void run();
+    static nested_window_container generateLayout();
 
 private:
     sf::RenderWindow m_game_window;
     WindowManager m_window_manager;
+    RectNestedWindow m_ui;
 };
 
 

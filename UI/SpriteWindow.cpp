@@ -6,7 +6,7 @@
 
 #include <utility>
 
-void SpriteWindow::update() {
+void SpriteWindow::updateWindow() {
     // Do nothing
 }
 

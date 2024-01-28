@@ -33,7 +33,23 @@ void RectWindow::setShape(sf::RectangleShape shape)
     m_shape = std::move(shape);
 }
 
-void RectWindow::update() {
+bool RectWindow::contains(const sf::Vector2f& point) const
+{
+    return m_shape.getGlobalBounds().contains(point);
+}
+
+bool RectWindow::contains(float x, float y) const
+{
+    return contains({x, y});
+}
+
+bool RectWindow::contains(int x, int y) const
+{
+    return contains(static_cast<float>(x), static_cast<float>(y));
+}
+
+
+void RectWindow::updateWindow() {
 
 }
 
