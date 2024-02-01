@@ -8,7 +8,7 @@
 - `SFML`
 - `nlohmann-json`
 
-### Build from source on Windows
+## Build from source on Windows
 1. Install `CMake`
 
 2. Install [`vcpkg`](https://github.com/microsoft/vcpkg)
@@ -31,7 +31,7 @@
    make
    ```
    
-### Build from source on macOS via Brew
+## Build from source on macOS via Brew
 1. Install `brew`
    ```shell
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
