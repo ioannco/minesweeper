@@ -6,8 +6,8 @@
 #define MINESWEEPER_SWEEPERENGINE_H
 
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "../UI/WindowManager.h"
-#include "../UI/RectNestedWindow.h"
+#include "../UI/window/WindowManager.h"
+#include "../UI/window/RectNestedWindow.h"
 
 class SweeperEngine {
 public:

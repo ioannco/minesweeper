@@ -4,8 +4,8 @@
 
 #include "SweeperEngine.h"
 
-#include "../UI/NestedSpriteWindow.h"
-#include "../UI/SpriteWindow.h"
+#include "../UI/window/NestedSpriteWindow.h"
+#include "../UI/window/SpriteWindow.h"
 
 SweeperEngine::SweeperEngine() :
     m_game_window(sf::VideoMode{1920, 1080}, "Mine Sweeper")

@@ -1,5 +1,5 @@
 #include "engine/SweeperEngine.h"
-#include "UI/WindowManager.h"
+#include "UI/window/WindowManager.h"
 
 abstract_window_container constructLayout();
 
